@@ -1,0 +1,1326 @@
+.karte_kcx_home_recommend_only_sp a,
+.karte_kcx_home_recommend_only_pc a,
+.karte_kcx_data_recommend_source a {
+    text-decoration: none;
+}
+
+.karte_kcx_home_recommend_only_sp_slider_h3 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0 0 0 24px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    line-height: 1.2;
+    --title-icon-size: 1.75em;
+
+    /* background-color: aqua; */
+
+    /* 文字の部分の間の余白を増やし、SP/PC条件分け
+    PC: 上の余白64px、下の余白24px　　SP: 上の余白48px 、下の余白16px */
+}
+
+.karte_kcx_home_recommend_only_sp_slider_h3::before {
+    content: "";
+    width: var(--title-icon-size);
+    height: var(--title-icon-size);
+    flex: 0 0 var(--title-icon-size);
+    margin-right: 0.35em;
+    background-image: url("https://cdn-blocks.karte.io/0e4c8cc8422c96d307d6380caed5415b/entity/6507bb02-0df1-4918-831d-ca71510ae341");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.karte_kcx_home_recommend_only_sp_slider_main_wrap {
+    /* border: 1px solid #000; */
+    display: flex;
+    flex-direction: column;
+    background: #ECFAD7;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    box-sizing: border-box;
+}
+
+/* サイドイメージカルーセル */
+.karte_kcx_home_recommend_only_sp_root {
+    /* 左右のスライダアイテムの大きさを設定 */
+    /* --min-scale-size-pc: .8; */
+    --min-scale-size-pc: .6;
+    --min-scale-size-sp: 1;
+    --indicator-active-color: #EB1E1E
+}
+
+.karte_kcx_home_recommend_only_sp_root:where(.astro-RSPN73YO_only_sp) {
+    /* スライダーの全体の高さを調節 */
+    /* height: 53vw; 文字列2行の高さも含む */
+    height: 640px; /* 画像表示領域を広げる */
+    position: relative;
+    overflow: hidden;
+}
+
+.karte_kcx_home_recommend_only_sp_slider:where(.astro-RSPN73YO_only_sp) {
+    position: absolute;
+    /* スライダー全体の高さを調節 */
+    top: 40%;
+    transform: translateY(-40%);
+    width: 100%;
+    height: 100%;
+    overflow: hidden
+}
+
+.karte_kcx_home_recommend_only_sp_slider__Group:where(.astro-RSPN73YO_only_sp) {
+    position: relative;
+    top: 25%;
+    transform: translateY(-28%);
+    width: 100%;
+    /* 修正 */
+    height: 90%;
+    padding-bottom: 20px;
+
+    /* background-color: yellow; */
+}
+
+/* インディケーターの位置を上下に調節 */
+.karte_kcx_home_recommend_only_sp_slider__IndicatorGroup:where(.astro-RSPN73YO_only_sp) {
+    bottom: -14px;
+}
+
+@media screen and (max-width: 768px) {
+    .karte_kcx_home_recommend_only_sp_slider__IndicatorGroup:where(.astro-RSPN73YO_only_sp) {
+        bottom: -14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .karte_kcx_home_recommend_only_sp_slider__IndicatorGroup:where(.astro-RSPN73YO_only_sp) {
+        bottom: -10px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+}
+
+/* 「前へ」「次へ」ボタンの位置を上下に調節 */
+.karte_kcx_home_recommend_only_sp_slider__Btn:where(.astro-RSPN73YO_only_sp) {
+    top: -50px !important;
+}
+
+.karte_kcx_home_recommend_only_sp_slider__Thumb:where(.astro-RSPN73YO_only_sp) {
+    /* 修正 */
+
+    /* width: 100%; */
+    width: 90%;
+
+    /* 削除 */
+
+    /* height: 100%; */
+    object-fit: cover;
+    display: block;
+    object-position: center;
+    border-radius: 5px;
+}
+
+.karte_kcx_home_recommend_only_sp_slider__ImgContent:where(.astro-RSPN73YO_only_sp) {
+    width: 100%;
+    flex-shrink: 0;
+}
+
+.karte_kcx_home_recommend_only_sp_slider__Item:where(.astro-RSPN73YO_only_sp) {
+    display: flex;
+    flex-direction: column;
+}
+
+.karte_kcx_sp_rec_home_recomend_card {
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 10px;
+    background: #fff; /* カードの背景色 */
+    /* background: #f2f2f2; */
+    border-radius: 12px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    /* gap: 6px; */
+    overflow: hidden;
+    padding-bottom: 25px;
+    margin-bottom: 10px;
+}
+
+.karte_kcx_home_recommend_only_sp_slider:where(.astro-RSPN73YO_only_sp) .karte_kcx_home_recommend_only_sp_slider__Group:where(.astro-RSPN73YO_only_sp).sliderDouble-BZV63T2Q_PC4S_SP1S3B .karte_kcx_sp_rec_home_recomend_card {
+    height: 100%;
+    justify-content: flex-start;
+    padding: 8px;
+}
+
+.karte_kcx_home_recommend_only_sp_slider:where(.astro-RSPN73YO_only_sp) .karte_kcx_home_recommend_only_sp_slider__Group:where(.astro-RSPN73YO_only_sp).sliderDouble-BZV63T2Q_PC4S_SP1S3B .karte_kcx_sp_rec_home_recomend_card > .karte_kcx_sp_rec_home_recomend_row + .karte_kcx_sp_rec_home_recomend_row {
+    margin-top: 6px;
+}
+
+.karte_kcx_home_recommend_only_sp_slider:where(.astro-RSPN73YO_only_sp) .karte_kcx_home_recommend_only_sp_slider__Group:where(.astro-RSPN73YO_only_sp).sliderDouble-BZV63T2Q_PC4S_SP1S3B .karte_kcx_sp_rec_home_recomend_row {
+    flex: 0 0 calc((100% - 12px) / 3);
+}
+
+.karte_kcx_sp_rec_home_recomend_row {
+    /* Grid非対応ブラウザ向けフォールバック */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    flex: 1 1 0;
+    min-height: 112px;
+}
+
+.karte_kcx_sp_rec_home_recomend_row.karte_kcx_sp_rec_home_recomend_row--no-note {
+    min-height: 96px;
+}
+
+.karte_kcx_sp_rec_home_recomend_media,
+.karte_kcx_sp_rec_home_recomend_body {
+    flex: 0 0 auto;
+}
+
+.karte_kcx_sp_rec_home_recomend_media {
+    width: 45%;
+    margin-right: 3px;
+}
+
+.karte_kcx_sp_rec_home_recomend_body {
+    flex: 1 1 calc(55% - 3px);
+}
+
+.karte_kcx_sp_rec_home_recomend_note {
+    width: 100%;
+    margin: 1px 0 0;
+    padding: 7px 10px;
+    font-size: 10px;
+    line-height: 1.35;
+    font-weight: 400;
+    color: #888;
+    background: #f4f4f4;
+    border-radius: 8px;
+    display: block;
+    white-space: normal;
+    word-break: break-word;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-height: none;
+    overflow: visible;
+    text-overflow: clip;
+}
+
+@supports (display: grid) {
+    .karte_kcx_sp_rec_home_recomend_row {
+        display: grid;
+        grid-template-columns: 45% 1fr;
+        grid-template-rows: auto auto;
+        grid-row-gap: 3px;
+        grid-column-gap: 3px;
+    }
+
+    .karte_kcx_sp_rec_home_recomend_row.karte_kcx_sp_rec_home_recomend_row--no-note {
+        grid-template-rows: auto;
+    }
+
+    .karte_kcx_sp_rec_home_recomend_media,
+    .karte_kcx_sp_rec_home_recomend_body {
+        grid-row: 1;
+    }
+
+    .karte_kcx_sp_rec_home_recomend_media {
+        width: auto;
+        margin-right: 0;
+    }
+
+    .karte_kcx_sp_rec_home_recomend_body {
+        flex: none;
+    }
+
+    .karte_kcx_sp_rec_home_recomend_note {
+        grid-row: 2;
+        grid-column: 1 / -1;
+        width: auto;
+    }
+}
+
+.karte_kcx_data_recommend_data_area {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.karte_kcx_sp_rec_home_recomend_media {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    height: auto;
+    background: #ddd;
+    margin-bottom: 0;
+    padding-bottom: 8px;
+}
+
+.karte_kcx_home_recommend_only_sp_slider:where(.astro-RSPN73YO_only_sp) .karte_kcx_home_recommend_only_sp_slider__Group:where(.astro-RSPN73YO_only_sp).sliderDouble-BZV63T2Q_PC4S_SP1S3B .karte_kcx_sp_rec_home_recomend_media {
+    background: #ddd;
+}
+
+.karte_kcx_sp_rec_home_recomend_thumb {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.karte_kcx_sp_rec_home_recomend_body {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+
+.karte_kcx_sp_rec_home_recomend_body > * + * {
+    margin-top: 4px;
+}
+
+.karte_kcx_sp_rec_home_recomend_title {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #2b2b2b;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    max-height: 2.4em;
+    overflow: hidden;
+    text-overflow: clip;
+}
+
+.karte_kcx_sp_rec_home_recomend_title br,
+.karte_kcx_pc_rec_home_recomend_title br {
+    display: none;
+}
+
+@media screen and (max-width: 960px) {
+    .karte_kcx_sp_rec_home_recomend_title br,
+    .karte_kcx_pc_rec_home_recomend_title br {
+        display: inline;
+    }
+}
+
+.karte_kcx_sp_rec_home_recomend_line {
+    width: 30px;
+    height: 3px;
+    background: #e9c400;
+    border-radius: 999px;
+    display: none;
+}
+
+.karte_kcx_sp_rec_home_recomend_desc {
+    margin: 5px 0 0 0;
+    font-size: 18px;
+    line-height: 1.25;
+    font-weight: 700;
+    color: #2b2b2b;
+    word-break: break-word;
+    overflow: visible;
+}
+
+@media screen and (max-width: 480px) {
+    .karte_kcx_home_recommend_only_sp_root:where(.astro-RSPN73YO_only_sp) {
+        height: 134vw;
+    }
+
+    .karte_kcx_sp_rec_home_recomend_media {
+        height: auto;
+        padding-bottom: 0;
+    }
+
+    .karte_kcx_sp_rec_home_recomend_thumb {
+        height: auto;
+        max-width: 100%;
+    }
+
+    .karte_kcx_sp_rec_home_recomend_card--count-1 .karte_kcx_sp_rec_home_recomend_row,
+    .karte_kcx_sp_rec_home_recomend_card--count-2 .karte_kcx_sp_rec_home_recomend_row,
+    .karte_kcx_sp_rec_home_recomend_card--count-3 .karte_kcx_sp_rec_home_recomend_row {
+        -webkit-flex: 1 1 auto;
+        flex: 1 1 auto;
+        height: auto;
+        min-height: 116px;
+    }
+}
+
+.karte_kcx_home_recommend_only_sp_slider__Thumb:where(.astro-RSPN73YO_only_sp) {
+    margin: 0 auto;
+}
+
+.karte_kcx_home_recommend_only_sp_slider__Item:where(.astro-RSPN73YO_only_sp) {
+    display: flex;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-decoration: none;
+    /* 削除 */
+    /* background-color: #fff; */
+    left: 150%;
+    z-index: 1;
+    text-decoration: none !important;
+    /* 削除 */
+    /* border: 1px solid #e7e8e8; */
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    transition: 1s all ease;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    /* 削除 */
+    /* border-radius: 5px; */
+}
+
+/* 削除 */
+/*
+.karte_kcx_home_recommend_only_sp_slider__Item:where(.astro-RSPN73YO_only_sp):hover {
+    box-shadow: 0 4px 10px -2px #00100e14, 0 4px 20px 8px #00100e08
+}
+*/
+
+.karte_kcx_home_recommend_only_sp_slider__Item:where(.astro-RSPN73YO_only_sp):nth-child(1) {
+    opacity: 1;
+    left: 0;
+    z-index: 1;
+    transform: translate(-100%) scale(var(--min-scale-size-pc));
+}
+
+.karte_kcx_home_recommend_only_sp_slider__Item:where(.astro-RSPN73YO_only_sp):nth-child(2) {
+    opacity: 1;
+    left: 0;
+    z-index: 2;
+    /* PCの場合のチラ見せ部分を多くする（左側） */
+    /* transform: translate(-50%) scale(var(--min-scale-size-pc)) */
+    transform: translate(-30%) scale(var(--min-scale-size-pc));
+}
+
+.karte_kcx_home_recommend_only_sp_slider__Item:where(.astro-RSPN73YO_only_sp):nth-child(3) {
+    opacity: 1;
+    left: 50%;
+    z-index: 4;
+    transform: translate(-50%) scale(1);
+}
+
+.karte_kcx_home_recommend_only_sp_slider__Item:where(.astro-RSPN73YO_only_sp):nth-child(4) {
+    opacity: 1;
+    left: 100%;
+    z-index: 2;
+    /* PCの場合のチラ見せ部分を多くする（右側） */
+    /* transform: translate(-50%) scale(var(--min-scale-size-pc)) */
+    transform: translate(-70%) scale(var(--min-scale-size-pc));
+}
+
+.karte_kcx_home_recommend_only_sp_slider:where(.astro-RSPN73YO_only_sp) .karte_kcx_home_recommend_only_sp_slider__Group:where(.astro-RSPN73YO_only_sp).sliderDouble-BZV63T2Q_PC4S_SP1S3B .karte_kcx_home_recommend_only_sp_slider__Item:where(.astro-RSPN73YO_only_sp) {
+    display: none;
+}
+
+.karte_kcx_home_recommend_only_sp_slider:where(.astro-RSPN73YO_only_sp) .karte_kcx_home_recommend_only_sp_slider__Group:where(.astro-RSPN73YO_only_sp).sliderDouble-BZV63T2Q_PC4S_SP1S3B .karte_kcx_home_recommend_only_sp_slider__Item:where(.astro-RSPN73YO_only_sp):nth-child(1) {
+    opacity: 1;
+    left: 0;
+    z-index: 1;
+    transform: translate(-100%) scale(var(--min-scale-size-pc));
+}
+
+.karte_kcx_home_recommend_only_sp_slider:where(.astro-RSPN73YO_only_sp) .karte_kcx_home_recommend_only_sp_slider__Group:where(.astro-RSPN73YO_only_sp).sliderDouble-BZV63T2Q_PC4S_SP1S3B .karte_kcx_home_recommend_only_sp_slider__Item:where(.astro-RSPN73YO_only_sp):nth-child(2) {
+    opacity: 1;
+    display: flex;
+    left: 50%;
+    z-index: 4;
+    transform: translate(-50%) scale(1);
+}
+
+.sliderSimple-BZV63T2Q_PC4S_SP1S3B:where(.astro-RSPN73YO_only_sp) .karte_kcx_home_recommend_only_sp_slider__Item:where(.astro-RSPN73YO_only_sp) {
+    display: none;
+}
+
+.sliderSimple-BZV63T2Q_PC4S_SP1S3B:where(.astro-RSPN73YO_only_sp) .karte_kcx_home_recommend_only_sp_slider__Item:where(.astro-RSPN73YO_only_sp):nth-child(3) {
+    display: flex;
+}
+
+.karte_kcx_home_recommend_only_sp_slider:where(.astro-RSPN73YO_only_sp) .karte_kcx_home_recommend_only_sp_slider__Group:where(.astro-RSPN73YO_only_sp).sliderSingle-BZV63T2Q_PC4S_SP1S3B .karte_kcx_home_recommend_only_sp_slider__Item:where(.astro-RSPN73YO_only_sp):nth-child(1) {
+    opacity: 1;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 4;
+    transform: translate(0) scale(1);
+}
+
+.sliderSingle-BZV63T2Q_PC4S_SP1S3B:where(.astro-RSPN73YO_only_sp) .karte_kcx_home_recommend_only_sp_slider__Item:where(.astro-RSPN73YO_only_sp) {
+    transition: all .8s ease;
+}
+
+.sliderLoaded-BZV63T2Q_PC4S_SP1S3B:where(.astro-RSPN73YO_only_sp) .karte_kcx_home_recommend_only_sp_slider__Item:where(.astro-RSPN73YO_only_sp) {
+    transition: all .8s ease;
+}
+
+.karte_kcx_home_recommend_only_sp_slider__Btn:where(.astro-RSPN73YO_only_sp) {
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    color: #EB1E1E;
+    z-index: 4;
+    transition: background-color .3s ease;
+    width: 48px;
+    height: 48px;
+    background-color: #fff;
+    box-shadow: 0 8px 18px -2px #00100e14, 0 8px 36px 16px #00100e08;
+    border-radius: 50%;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 33px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.karte_kcx_home_recommend_only_sp_slider__prev:where(.astro-RSPN73YO_only_sp) {
+    left: 19%;
+}
+
+.karte_kcx_home_recommend_only_sp_slider__next:where(.astro-RSPN73YO_only_sp) {
+    right: 19%;
+}
+
+.karte_kcx_home_recommend_only_sp_slider__Btn:where(.astro-RSPN73YO_only_sp):hover {
+    background-color: #f7f8f8;
+}
+
+.karte_kcx_home_recommend_only_sp_slider__Btn:where(.astro-RSPN73YO_only_sp) svg:where(.astro-RSPN73YO_only_sp) {
+    height: 16px;
+    overflow: visible;
+    vertical-align: -3px;
+}
+
+.karte_kcx_home_recommend_only_sp_slider__IndicatorGroup:where(.astro-RSPN73YO_only_sp) {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    z-index: 20;
+    /* mac_safariだとインジケーター部分が詰まって表示されるのを修正。古いブラウザにも対応 */
+    /* gap: 12px; */
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    /* 削除 */
+    /* bottom: 1px */
+}
+
+.karte_kcx_home_recommend_only_sp_slider__Indicator:where(.astro-RSPN73YO_only_sp) {
+    cursor: pointer;
+    width: 8px;
+    height: 8px;
+    background: rgba(0, 16, 14, .12);
+    border-radius: 40px;
+    /* mac_safariだとインジケーター部分が詰まって表示されるのを修正。古いブラウザにも対応 */
+    margin: 0 6px;
+}
+
+.karte_kcx_home_recommend_only_sp_slider__Indicator:where(.astro-RSPN73YO_only_sp).indicatorCurrent-BZV63T2Q_only_sp {
+    background: var(--indicator-active-color)
+}
+
+@media screen and (max-width: 960px) {
+    .karte_kcx_home_recommend_only_sp_root:where(.astro-RSPN73YO_only_sp) {
+        height: 122vw;
+    }
+
+    .karte_kcx_home_recommend_only_sp_slider_h3 {
+        font-size: 1.8rem;
+        /* 文字の部分の間の余白を増やし、SP/PC条件分け
+           PC：上の余白64px、下の余白24px　　SP:上の余白48px、下の余白16px */
+        margin: 0 0 0 10px;
+        --title-icon-size: 1.6em;
+    }
+
+    /* .karte_kcx_home_recommend_only_sp_slider__IndicatorGroup:where(.astro-RSPN73YO_only_sp) {
+        bottom: -26px;
+    } */
+
+    .karte_kcx_home_recommend_only_sp_slider__Group:where(.astro-RSPN73YO_only_sp) {
+        top: 52%;
+        height: 84%;
+        transform: translateY(-60%);
+    }
+
+    .karte_kcx_sp_rec_home_recomend_card {
+        padding: 20px; /* SPの一番下の画像の下の余白が増える */
+    }
+
+    .karte_kcx_home_recommend_only_sp_slider:where(.astro-RSPN73YO_only_sp) .karte_kcx_home_recommend_only_sp_slider__Group:where(.astro-RSPN73YO_only_sp).sliderDouble-BZV63T2Q_PC4S_SP1S3B .karte_kcx_sp_rec_home_recomend_card > .karte_kcx_sp_rec_home_recomend_row + .karte_kcx_sp_rec_home_recomend_row {
+        margin-top: 5px;
+    }
+
+    .karte_kcx_sp_rec_home_recomend_row {
+        /* フォールバック：古いブラウザ用 */
+        display: flex;
+        flex-wrap: wrap;
+
+        /* 新しいブラウザ用 */
+        display: grid;
+        grid-template-columns: 45% 1fr;
+        grid-row-gap: 2px;
+        grid-column-gap: 2px;
+        min-height: 132px;
+    }
+
+    .karte_kcx_sp_rec_home_recomend_row.karte_kcx_sp_rec_home_recomend_row--no-note {
+        min-height: 104px;
+    }
+
+    .karte_kcx_sp_rec_home_recomend_line {
+        width: 32px;
+        height: 4px;
+        display: block;
+    }
+
+    .karte_kcx_sp_rec_home_recomend_media {
+        background: #fff;
+        margin-bottom: 0;
+        margin-left: 0;
+    }
+
+    .karte_kcx_home_recommend_only_sp_slider__Thumb:where(.astro-RSPN73YO_only_sp) {
+        width: 100%;
+    }
+
+    .karte_kcx_home_recommend_only_sp_slider__Btn:where(.astro-RSPN73YO_only_sp) {
+        width: 38px;
+        height: 38px;
+    }
+
+    .karte_kcx_home_recommend_only_sp_slider__Btn:where(.astro-RSPN73YO_only_sp) svg:where(.astro-RSPN73YO_only_sp) {
+        height: 12px;
+    }
+
+    .karte_kcx_home_recommend_only_sp_auto_slide_btn.pause {
+        bottom: calc(100% - 36px);
+    }
+
+    .karte_kcx_home_recommend_only_sp_slider__prev:where(.astro-RSPN73YO_only_sp) {
+        left: 3%;
+    }
+
+    .karte_kcx_home_recommend_only_sp_slider__next:where(.astro-RSPN73YO_only_sp) {
+        right: 3%;
+    }
+
+    .karte_kcx_home_recommend_only_sp_slider:where(.astro-RSPN73YO_only_sp) .karte_kcx_home_recommend_only_sp_slider__Group:where(.astro-RSPN73YO_only_sp) .karte_kcx_home_recommend_only_sp_slider__Item:where(.astro-RSPN73YO_only_sp) {
+        width: 80%;
+    }
+
+    .karte_kcx_home_recommend_only_sp_slider:where(.astro-RSPN73YO_only_sp) .karte_kcx_home_recommend_only_sp_slider__Group:where(.astro-RSPN73YO_only_sp) .karte_kcx_home_recommend_only_sp_slider__Item:where(.astro-RSPN73YO_only_sp):nth-child(1) {
+        transform: translate(-100%) scale(var(--min-scale-size-sp));
+    }
+
+    .karte_kcx_home_recommend_only_sp_slider:where(.astro-RSPN73YO_only_sp) .karte_kcx_home_recommend_only_sp_slider__Group:where(.astro-RSPN73YO_only_sp) .karte_kcx_home_recommend_only_sp_slider__Item:where(.astro-RSPN73YO_only_sp):nth-child(2) {
+        transform: translate(-85%) scale(var(--min-scale-size-sp));
+    }
+
+    .karte_kcx_home_recommend_only_sp_slider:where(.astro-RSPN73YO_only_sp) .karte_kcx_home_recommend_only_sp_slider__Group:where(.astro-RSPN73YO_only_sp) .karte_kcx_home_recommend_only_sp_slider__Item:where(.astro-RSPN73YO_only_sp):nth-child(3) {
+        left: 50%;
+        z-index: 4;
+        transform: translate(-50%) scale(var(--min-scale-size-sp));
+        width: 80%;
+    }
+
+    .karte_kcx_home_recommend_only_sp_slider:where(.astro-RSPN73YO_only_sp) .karte_kcx_home_recommend_only_sp_slider__Group:where(.astro-RSPN73YO_only_sp) .karte_kcx_home_recommend_only_sp_slider__Item:where(.astro-RSPN73YO_only_sp):nth-child(4) {
+        transform: translate(-15%) scale(var(--min-scale-size-sp));
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .karte_kcx_sp_rec_home_recomend_card {
+        padding: 10px; /* SPの一番下の画像の下の余白が増える */
+    }
+
+    .karte_kcx_home_recommend_only_sp_slider:where(.astro-RSPN73YO_only_sp) .karte_kcx_home_recommend_only_sp_slider__Group:where(.astro-RSPN73YO_only_sp).sliderDouble-BZV63T2Q_PC4S_SP1S3B .karte_kcx_sp_rec_home_recomend_card > .karte_kcx_sp_rec_home_recomend_row + .karte_kcx_sp_rec_home_recomend_row {
+        margin-top: 5px;
+    }
+
+    .karte_kcx_sp_rec_home_recomend_row {
+        grid-template-columns: 45% 1fr;
+        grid-row-gap: 2px;
+        grid-column-gap: 2px;
+    }
+
+    .karte_kcx_sp_rec_home_recomend_line {
+        width: 30px;
+        height: 3px;
+        display: block;
+    }
+
+    .karte_kcx_home_recommend_only_sp_slider__ImgContent:where(.astro-RSPN73YO_only_sp) {
+        width: 100%;
+    }
+
+    .karte_kcx_home_recommend_only_sp_slider:where(.astro-RSPN73YO_only_sp) .karte_kcx_home_recommend_only_sp_slider__Group:where(.astro-RSPN73YO_only_sp) .karte_kcx_home_recommend_only_sp_slider__Item:where(.astro-RSPN73YO_only_sp):hover {
+        box-shadow: none;
+    }
+
+    .karte_kcx_home_recommend_only_sp_slider:where(.astro-RSPN73YO_only_sp) .karte_kcx_home_recommend_only_sp_slider__Group:where(.astro-RSPN73YO_only_sp) .karte_kcx_home_recommend_only_sp_slider__Item:where(.astro-RSPN73YO_only_sp):nth-child(1) {
+        left: 0;
+        z-index: 1;
+        transform: translate(-100%) scale(var(--min-scale-size-sp));
+    }
+
+    .karte_kcx_home_recommend_only_sp_slider:where(.astro-RSPN73YO_only_sp) .karte_kcx_home_recommend_only_sp_slider__Group:where(.astro-RSPN73YO_only_sp) .karte_kcx_home_recommend_only_sp_slider__Item:where(.astro-RSPN73YO_only_sp):nth-child(2) {
+        left: 0;
+        z-index: 2;
+        transform: translate(-85%) scale(var(--min-scale-size-sp));
+    }
+
+    .karte_kcx_home_recommend_only_sp_slider:where(.astro-RSPN73YO_only_sp) .karte_kcx_home_recommend_only_sp_slider__Group:where(.astro-RSPN73YO_only_sp) .karte_kcx_home_recommend_only_sp_slider__Item:where(.astro-RSPN73YO_only_sp):nth-child(3) {
+        left: 50%;
+        z-index: 4;
+        transform: translate(-50%) scale(var(--min-scale-size-sp));
+        width: 80%;
+    }
+
+    .karte_kcx_home_recommend_only_sp_slider:where(.astro-RSPN73YO_only_sp) .karte_kcx_home_recommend_only_sp_slider__Group:where(.astro-RSPN73YO_only_sp) .karte_kcx_home_recommend_only_sp_slider__Item:where(.astro-RSPN73YO_only_sp):nth-child(4) {
+        left: 100%;
+        z-index: 2;
+        transform: translate(-15%) scale(var(--min-scale-size-sp));
+    }
+
+    .karte_kcx_home_recommend_only_sp_slider:where(.astro-RSPN73YO_only_sp) .karte_kcx_home_recommend_only_sp_slider__Group:where(.astro-RSPN73YO_only_sp).sliderDouble-BZV63T2Q_PC4S_SP1S3B .karte_kcx_home_recommend_only_sp_slider__Item:where(.astro-RSPN73YO_only_sp):nth-child(2) {
+        display: block;
+    }
+
+    .karte_kcx_home_recommend_only_sp_slider:where(.astro-RSPN73YO_only_sp) .karte_kcx_home_recommend_only_sp_slider__Group:where(.astro-RSPN73YO_only_sp).sliderSimple-BZV63T2Q_PC4S_SP1S3B .karte_kcx_home_recommend_only_sp_slider__Item:where(.astro-RSPN73YO_only_sp) {
+        transition: none;
+    }
+}
+
+@media screen and (max-width: 700px) and (min-width: 500px) {
+    .karte_kcx_home_recommend_only_sp_root:where(.astro-RSPN73YO_only_sp) {
+        height: 142vw;
+    }
+
+    .karte_kcx_sp_rec_home_recomend_row {
+        min-height: 140px;
+    }
+
+    .karte_kcx_sp_rec_home_recomend_row.karte_kcx_sp_rec_home_recomend_row--no-note {
+        min-height: 108px;
+    }
+
+    .karte_kcx_sp_rec_home_recomend_media {
+        background: #fff;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .karte_kcx_home_recommend_only_sp_slider_h3 {
+        font-size: 13.5px;
+        margin: 0 0 0 12px;
+        --title-icon-size: 1.35em;
+    }
+
+    .karte_kcx_sp_rec_home_recomend_card {
+        padding: 10px 10px 12px;
+    }
+
+    .karte_kcx_home_recommend_only_sp_slider:where(.astro-RSPN73YO_only_sp) .karte_kcx_home_recommend_only_sp_slider__Group:where(.astro-RSPN73YO_only_sp).sliderDouble-BZV63T2Q_PC4S_SP1S3B .karte_kcx_sp_rec_home_recomend_card > .karte_kcx_sp_rec_home_recomend_row + .karte_kcx_sp_rec_home_recomend_row {
+        margin-top: 4px;
+    }
+
+    .karte_kcx_sp_rec_home_recomend_row {
+        grid-template-columns: 44% 1fr;
+        grid-row-gap: 4px;
+        grid-column-gap: 4px;
+        min-height: 148px;
+    }
+
+    .karte_kcx_sp_rec_home_recomend_row.karte_kcx_sp_rec_home_recomend_row--no-note {
+        min-height: 112px;
+    }
+
+    .karte_kcx_sp_rec_home_recomend_note {
+        font-size: 5.625px;
+        line-height: 1.28;
+        padding: 5px 8px;
+        max-height: none;
+    }
+
+    .karte_kcx_sp_rec_home_recomend_media {
+        margin-left: 0;
+        margin-bottom: 4px;
+    }
+
+    .karte_kcx_sp_rec_home_recomend_card--count-1 .karte_kcx_sp_rec_home_recomend_row,
+    .karte_kcx_sp_rec_home_recomend_card--count-2 .karte_kcx_sp_rec_home_recomend_row,
+    .karte_kcx_sp_rec_home_recomend_card--count-3 .karte_kcx_sp_rec_home_recomend_row {
+        -webkit-flex: 1 1 auto;
+        flex: 1 1 auto;
+        height: auto;
+        min-height: 108px;
+    }
+
+    .karte_kcx_sp_rec_home_recomend_line {
+        width: 26px;
+        height: 3px;
+        display: block;
+    }
+
+    /* .karte_kcx_sp_rec_home_recomend_desc {
+        font-size: 0.85rem;
+        line-height: 1.15;
+    } */
+
+    .karte_kcx_home_recommend_only_sp_slider:where(.astro-RSPN73YO_only_sp) .karte_kcx_home_recommend_only_sp_slider__Group:where(.astro-RSPN73YO_only_sp).sliderDouble-BZV63T2Q_PC4S_SP1S3B .karte_kcx_sp_rec_home_recomend_card {
+        height: 100%;
+    }
+
+    .karte_kcx_home_recommend_only_sp_root:where(.astro-RSPN73YO_only_sp) {
+        height: 142vw;
+    }
+
+    .karte_kcx_home_recommend_only_sp_slider__IndicatorGroup:where(.astro-RSPN73YO_only_sp) {
+        /* bottom: 0px; */
+        transform: translateY(-50%) !important;
+    }
+}
+
+/* 停止ボタンと再生ボタン */
+.karte_kcx_home_recommend_only_sp_slider__IndicatorGroup {
+    position: relative;
+}
+
+.karte_kcx_home_recommend_only_sp_auto_slide_btn {
+    position: absolute;
+}
+
+/* 再生ボタン */
+.karte_kcx_home_recommend_only_sp_auto_slide_btn.triangle {
+    bottom: calc(100% - 15px);
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: #fff;
+    border: 1px solid rgba(235, 30, 30, 0.12);
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0, 16, 14, 0.12);
+    box-sizing: border-box;
+    color: #EB1E1E;
+    cursor: pointer;
+}
+
+.karte_kcx_home_recommend_only_sp_auto_slide_btn.triangle::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 8px solid currentColor;
+    transform: translate(-50%, -50%);
+}
+
+/* 停止ボタン */
+.karte_kcx_home_recommend_only_sp_auto_slide_btn.pause {
+    bottom: calc(100% - 15px);
+    width: 20px;
+    height: 20px;
+    font-size: 12.5px;
+    color: #EB1E1E;
+    background: #fff;
+    border: 1px solid rgba(235, 30, 30, 0.12);
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0, 16, 14, 0.12);
+    display: block;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.karte_kcx_home_recommend_only_sp_auto_slide_btn.pause::before,
+.karte_kcx_home_recommend_only_sp_auto_slide_btn.pause::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 2px;
+    height: 10px;
+    box-sizing: border-box;
+    background-color: currentColor;
+    border-radius: 999px;
+    transform: translate(-50%, -50%);
+}
+
+.karte_kcx_home_recommend_only_sp_auto_slide_btn.pause::before {
+    left: 40%;
+}
+
+.karte_kcx_home_recommend_only_sp_auto_slide_btn.pause::after {
+    left: 60%;
+}
+
+/* ------------------------------------------------------------ */
+/* SPのコンテンツをカードの上から配置する */
+.karte_kcx_sp_rec_home_recomend_card--count-1,
+.karte_kcx_sp_rec_home_recomend_card--count-2,
+.karte_kcx_sp_rec_home_recomend_card--count-3 {
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+}
+
+/* 1行の高さを3件表示時の高さに固定する */
+.karte_kcx_sp_rec_home_recomend_card--count-1 .karte_kcx_sp_rec_home_recomend_row,
+.karte_kcx_sp_rec_home_recomend_card--count-2 .karte_kcx_sp_rec_home_recomend_row,
+.karte_kcx_sp_rec_home_recomend_card--count-3 .karte_kcx_sp_rec_home_recomend_row {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+    flex: 0 0 auto;
+    height: auto;
+    min-height: 140px;
+}
+
+.karte_kcx_sp_rec_home_recomend_card--count-1 .karte_kcx_sp_rec_home_recomend_row.karte_kcx_sp_rec_home_recomend_row--no-note,
+.karte_kcx_sp_rec_home_recomend_card--count-2 .karte_kcx_sp_rec_home_recomend_row.karte_kcx_sp_rec_home_recomend_row--no-note,
+.karte_kcx_sp_rec_home_recomend_card--count-3 .karte_kcx_sp_rec_home_recomend_row.karte_kcx_sp_rec_home_recomend_row--no-note {
+    min-height: 108px;
+}
+
+/* 注記が空または存在しない行は高さを詰める */
+.karte_kcx_sp_rec_home_recomend_card--count-1 .karte_kcx_sp_rec_home_recomend_row.karte_kcx_sp_rec_home_recomend_row--no-note,
+.karte_kcx_sp_rec_home_recomend_card--count-2 .karte_kcx_sp_rec_home_recomend_row.karte_kcx_sp_rec_home_recomend_row--no-note,
+.karte_kcx_sp_rec_home_recomend_card--count-3 .karte_kcx_sp_rec_home_recomend_row.karte_kcx_sp_rec_home_recomend_row--no-note {
+    min-height: 96px;
+}
+
+/* 画像と文章の間隔をスマホで5pxにする場合は、代わりに次を使う */
+@media screen and (max-width: 960px) {
+    .karte_kcx_sp_rec_home_recomend_media {
+        margin-right: 5px;
+        margin-bottom: 0;
+    }
+
+    .karte_kcx_sp_rec_home_recomend_card--count-1 .karte_kcx_sp_rec_home_recomend_row.karte_kcx_sp_rec_home_recomend_row--no-note,
+    .karte_kcx_sp_rec_home_recomend_card--count-2 .karte_kcx_sp_rec_home_recomend_row.karte_kcx_sp_rec_home_recomend_row--no-note,
+    .karte_kcx_sp_rec_home_recomend_card--count-3 .karte_kcx_sp_rec_home_recomend_row.karte_kcx_sp_rec_home_recomend_row--no-note {
+        min-height: 90px;
+    }
+
+    .karte_kcx_sp_rec_home_recomend_row + .karte_kcx_sp_rec_home_recomend_row {
+        margin-top: 5px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .karte_kcx_sp_rec_home_recomend_card--count-1 .karte_kcx_sp_rec_home_recomend_row.karte_kcx_sp_rec_home_recomend_row--no-note,
+    .karte_kcx_sp_rec_home_recomend_card--count-2 .karte_kcx_sp_rec_home_recomend_row.karte_kcx_sp_rec_home_recomend_row--no-note,
+    .karte_kcx_sp_rec_home_recomend_card--count-3 .karte_kcx_sp_rec_home_recomend_row.karte_kcx_sp_rec_home_recomend_row--no-note {
+        min-height: 84px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .karte_kcx_sp_rec_home_recomend_card--count-1 .karte_kcx_sp_rec_home_recomend_row.karte_kcx_sp_rec_home_recomend_row--no-note,
+    .karte_kcx_sp_rec_home_recomend_card--count-2 .karte_kcx_sp_rec_home_recomend_row.karte_kcx_sp_rec_home_recomend_row--no-note,
+    .karte_kcx_sp_rec_home_recomend_card--count-3 .karte_kcx_sp_rec_home_recomend_row.karte_kcx_sp_rec_home_recomend_row--no-note {
+        min-height: 80px;
+    }
+}
+
+/* ------------------------------------------------------------------------ */
+@media screen and (max-width: 960px) {
+    .karte_kcx_home_recommend_only_pc {
+        display: none !important;
+    }
+
+    /* SPのみ左右ナビボタンを非表示 */
+    .karte_kcx_home_recommend_only_sp_slider__Btn:where(.astro-RSPN73YO_only_sp) {
+        display: none !important;
+    }
+}
+
+@media screen and (min-width: 961px) {
+    .karte_kcx_home_recommend_only_sp {
+        display: none !important;
+    }
+}
+
+/* ------------------------------------------------------------------------ */
+
+/* PC専用カルーセル（961px以上で4スライドを表示する） */
+.pc_carousel_main_wrap {
+    width: 100%;
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    background: #ECFAD7;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+.pc_carousel_root {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    min-height: 560px;
+    overflow: hidden;
+    background: #ECFAD7; /* PCの場合の背景色 */
+}
+
+.pc_carousel_slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+}
+
+.pc_carousel_group {
+    position: relative;
+    flex: 1;
+    height: 100%;
+    /* margin: 0 12px; */
+    margin: 0;
+}
+
+.pc_carousel_item {
+    position: absolute;
+    top: 0;
+    left: 100%;
+
+    width: 26%; /* 25%⇒26%に変更してスライドの幅を広げる */
+    height: 100%;
+
+    padding: 8px;
+    box-sizing: border-box;
+
+    opacity: 0;
+    text-decoration: none;
+
+    transition: left 0.8s ease, opacity 0.8s ease;
+}
+
+.pc_carousel_item:nth-child(1) {
+    left: 0;
+    opacity: 1;
+}
+
+.pc_carousel_item:nth-child(2) {
+    left: 25%;
+    opacity: 1;
+}
+
+.pc_carousel_item:nth-child(3) {
+    left: 50%;
+    opacity: 1;
+}
+
+.pc_carousel_item:nth-child(4) {
+    left: 75%;
+    opacity: 1;
+}
+
+.karte_kcx_pc_rec_home_recomend_card {
+    width: 100%;
+    height: 100%;
+
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+
+    box-sizing: border-box;
+}
+
+.karte_kcx_pc_rec_home_recomend_media {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    background: #ddd;
+    padding-bottom: 100%;
+
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+    flex: 0 0 auto;
+}
+
+.karte_kcx_pc_rec_home_recomend_thumb {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: contain;
+    object-position: center;
+}
+
+.karte_kcx_pc_rec_home_recomend_body {
+    min-height: 0;
+    padding: 8px;
+
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    flex: 1 1 auto;
+
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.karte_kcx_pc_rec_home_recomend_title {
+    margin: 0 0 8px;
+    font-size: 13px;
+    line-height: 1.4;
+    font-weight: 700;
+    color: #2b2b2b;
+    display: block;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+}
+
+.karte_kcx_pc_rec_home_recomend_line {
+    display: block;
+    width: 36px;
+    height: 3px;
+    margin: 0;
+    background: #f3d200;
+}
+
+.karte_kcx_pc_rec_home_recomend_desc {
+    margin: 4px 0;
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 700;
+    color: #2b2b2b;
+}
+
+.karte_kcx_pc_rec_home_recomend_note {
+    margin: 0;
+    padding: 8px;
+    font-size: 10px;
+    line-height: 1.5;
+    color: #777;
+    background: #f2f2f2;
+    border-radius: 8px;
+}
+
+.pc_carousel_prev,
+.pc_carousel_next {
+    position: static;
+    flex-shrink: 0;
+    top: auto;
+    z-index: 10;
+    color: #EB1E1E;
+    width: 48px;
+    height: 48px;
+
+    border: 0;
+    border-radius: 50%;
+    background: #fff;
+
+    cursor: pointer;
+    transform: none;
+}
+
+.pc_carousel_prev {
+    order: -1;
+    margin-right: 5px;
+    align-self: center;
+    transform: translateY(-40px);
+}
+
+.pc_carousel_next {
+    order: 1;
+    margin-left: 5px;
+    align-self: center;
+    transform: translateY(-40px);
+}
+
+@media screen and (min-width: 961px) {
+    .pc_carousel_root {
+        height: 480px;
+        min-height: 540px;
+    }
+
+    .pc_carousel_group {
+        height: calc(100% - 90px);
+    }
+}
+
+/* ------------------------------------------------------------------------ */
+/* 二重管理を回避 */
+
+.karte_kcx_data_recommend_source {
+    display: none;
+}
+
+/* ------------------------------------------------------------------------ */
+/* PCのページングと停止・再生ボタンをSPと同じ見た目にする */
+
+.pc_carousel_controls {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 15px;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: auto;
+}
+
+@media screen and (min-width: 961px) {
+    .pc_carousel_controls {
+        bottom: 30px;
+    }
+}
+
+.pc_carousel_indicators {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pc_carousel_indicator {
+    display: block;
+    width: 8px;
+    height: 8px;
+    margin: 0 6px;
+    padding: 0;
+    border: 0;
+    border-radius: 40px;
+    background: rgba(0, 16, 14, 0.12);
+    cursor: pointer;
+}
+
+.pc_carousel_indicator.is-current {
+    background: #EB1E1E;
+}
+
+.pc_carousel_pause {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    margin: 0 0 0 15px;
+    padding: 0;
+    border: 0;
+    background: #fff;
+    border: 1px solid rgba(235, 30, 30, 0.12);
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0, 16, 14, 0.12);
+    display: block;
+    box-sizing: border-box;
+    color: #EB1E1E;
+    cursor: pointer;
+}
+
+.pc_carousel_pause.pause::before,
+.pc_carousel_pause.pause::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 2px;
+    height: 10px;
+    background: currentColor;
+    border-radius: 999px;
+    transform: translate(-50%, -50%);
+}
+
+.pc_carousel_pause.pause::before {
+    left: 40%;
+}
+
+.pc_carousel_pause.pause::after {
+    left: 60%;
+}
+
+.pc_carousel_pause.triangle::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 8px solid currentColor;
+    transform: translate(-50%, -50%);
+}
+
+/* ソースの説明テキスト */
+.karte_kcx_data_recommend_desc {
+    margin: 0;
+    font-size: 8.75px;
+    line-height: 1.5;
+    font-weight: 700;
+    color: #2b2b2b;
+    word-break: break-word;
+    white-space: normal;
+    overflow: visible;
+}
+
+/* PCタイトル表示保証（競合スタイルがあっても画像下に表示する） */
+@media screen and (min-width: 961px) {
+    .pc_carousel_item .karte_kcx_pc_rec_home_recomend_body .karte_kcx_pc_rec_home_recomend_title {
+        display: block !important;
+        -webkit-box-orient: initial !important;
+        white-space: normal !important;
+        max-height: none !important;
+        overflow: visible !important;
+        text-overflow: initial !important;
+        line-height: 1.4 !important;
+        max-height: 2.8em;
+        color: #2b2b2b !important;
+    }
+
+    .pc_carousel_item .karte_kcx_pc_rec_home_recomend_body .karte_kcx_pc_rec_home_recomend_title br {
+        display: inline !important;
+    }
+
+    .pc_carousel_item .karte_kcx_pc_rec_home_recomend_body .karte_kcx_pc_rec_home_recomend_line {
+        display: block !important;
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 auto;
+        flex: 0 0 auto;
+        width: 36px !important;
+        height: 3px !important;
+        min-height: 3px;
+        margin: 0 0 8px 0;
+        background: #f3d200 !important;
+    }
+}
+
