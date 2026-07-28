@@ -67,7 +67,8 @@
     transform: translateY(-40%);
     width: 100%;
     height: 100%;
-    overflow: hidden
+    overflow: hidden;
+    touch-action: pan-y;
 }
 
 .karte_kcx_home_recommend_only_sp_slider__Group:where(.astro-RSPN73YO_only_sp) {

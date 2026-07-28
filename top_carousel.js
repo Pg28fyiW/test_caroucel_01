@@ -659,22 +659,45 @@ function createSP1s3cSideImageCarousel() {
 
 		let n = 0,
 			l = 0,
+			startY = 0,
+			isHorizontalSwipe = false,
 			h = 30;
 
 		c && (
 			c.addEventListener("touchstart", function (t) {
 				n = t.touches[0].pageX,
-				l = t.changedTouches[0].pageX
+				l = t.changedTouches[0].pageX,
+				startY = t.touches[0].pageY,
+				isHorizontalSwipe = false
 			}),
 
 			c.addEventListener("touchmove", function (t) {
-				t.preventDefault(),
-				l = t.changedTouches[0].pageX
-			}),
+				const currentTouch = t.touches[0];
+				if (!currentTouch) { return; }
+
+				const deltaX = currentTouch.pageX - n;
+				const deltaY = currentTouch.pageY - startY;
+
+				if (!isHorizontalSwipe) {
+					if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > 8) {
+						isHorizontalSwipe = true;
+					} else if (Math.abs(deltaY) > Math.abs(deltaX) && Math.abs(deltaY) > 8) {
+						return;
+					} else {
+						return;
+					}
+				}
+
+				t.preventDefault();
+				l = currentTouch.pageX;
+			}, { passive: false }),
 
 			c.addEventListener("touchend", function (t) {
+				if (!isHorizontalSwipe) { return; }
+
 				l < n && n > l + h ? s("next", 1)
 					: n < l && n + h < l && s("prev", 1)
+				isHorizontalSwipe = false;
 			})
 		)
 	}
@@ -1119,7 +1142,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	// requestAnimationFrameで束ねる高さ再計測関数を作成
 	const requestSpHeightAdjust = createSpRootHeightAdjuster();
 	const requestPcHeightAdjust = createPcRootHeightAdjuster();
-	const selectedSourceItems = getRandomSourceItems(15);
+	const selectedSourceItems = getRandomSourceItems(7);
 
 	// 共通HTMLからSP用スライドを作る
 	createSpItemsFromSource(selectedSourceItems);
