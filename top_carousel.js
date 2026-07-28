@@ -590,7 +590,6 @@ function createSP1s3cSideImageCarousel() {
 
 	// インディケーターの生成
 	function V() {
-
 		// ランダム表示後、Nodeを再取得
 		e = spRoot.querySelectorAll(".slider__Item-BZV63T2Q_only_sp");
 		u = spRoot.querySelector(".slider__IndicatorGroup-BZV63T2Q_only_sp");
@@ -598,37 +597,28 @@ function createSP1s3cSideImageCarousel() {
 
 		const origCount = e.length; // 元の枚数を保存
 		const minLoopSlides = 5;
-
-		for (let t = 0; t < origCount - 1; t++) {
-			u && B && u.appendChild(B.cloneNode(!0));
-		}
-
+		for (let t = 0; t < origCount - 1; t++) u && B && u.appendChild(B.cloneNode(!0));
 		if (v(), origCount === 1) return;
-
 		const r = spRoot.querySelectorAll(".slider__Indicator-BZV63T2Q_only_sp");
-
-		for (let t = 0; t < origCount; t++) {
-			e[t].setAttribute("data-slider-index", String(t));
+		for (let t = 0; t < origCount; t++)
+			e[t].setAttribute("data-slider-index", String(t)),
 			r[t] && r[t].setAttribute("data-indicator-index", String(t));
-		}
 
-		for (let t = 0; t < r.length; t++) {
-			r[t].addEventListener("click", function () {
-				let z = Number(r[t].getAttribute("data-indicator-index"));
-				Q(z);
+		for (let t = 0; t < r.length; t++)
+			r[t].addEventListener("click", function() {
+				let Z = Number(r[t].getAttribute("data-indicator-index"));
+				Q(Z)
 			});
-		}
 
 		// 5枚未満は「枚数の倍数」で配列を組み直して、周回時の並び崩れを防ぐ
 		if (origCount < minLoopSlides && i) {
 			const originalSlides = Array.from(e);
 			const loopCount = Math.ceil(minLoopSlides / origCount) * origCount;
 			const startOffset = (origCount - 2 + origCount) % origCount;
-
 			i.innerHTML = "";
 
 			for (let t = 0; t < loopCount; t++) {
-							const srcIndex = (startOffset + t) % origCount;
+				const srcIndex = (startOffset + t) % origCount;
 				const clone = originalSlides[srcIndex].cloneNode(true);
 				clone.setAttribute("data-slider-index", String(srcIndex));
 				i.appendChild(clone);
@@ -637,11 +627,9 @@ function createSP1s3cSideImageCarousel() {
 			e = spRoot.querySelectorAll(".slider__Item-BZV63T2Q_only_sp");
 
 		} else if (i && i.firstElementChild && i.lastElementChild) {
-
 			// 5枚以上は末尾2枚を順序維持したまま先頭に回す
 			i.insertBefore(i.lastElementChild, i.firstElementChild);
 			i.insertBefore(i.lastElementChild, i.firstElementChild);
-
 			e = spRoot.querySelectorAll(".slider__Item-BZV63T2Q_only_sp");
 		}
 
@@ -649,55 +637,68 @@ function createSP1s3cSideImageCarousel() {
 			i && i.classList.add("sliderLoaded-BZV63T2Q_only_sp")
 		}, 50),
 
-		a && a.addEventListener("click", function () {
+		a && a.addEventListener("click", function() {
 			s("prev", 1)
 		}),
 
-		f && f.addEventListener("click", function () {
+		f && f.addEventListener("click", function() {
 			s("next", 1)
 		});
 
-		let n = 0,
-			l = 0,
+		let startX = 0,
 			startY = 0,
+			currentX = 0,
+			currentY = 0,
+			h = 30,
 			isHorizontalSwipe = false,
-			h = 30;
+			hasDirectionLock = false;
 
 		c && (
-			c.addEventListener("touchstart", function (t) {
-				n = t.touches[0].pageX,
-				l = t.changedTouches[0].pageX,
-				startY = t.touches[0].pageY,
-				isHorizontalSwipe = false
+			c.addEventListener("touchstart", function(t) {
+				startX = t.touches[0].pageX;
+				startY = t.touches[0].pageY;
+				currentX = startX;
+				currentY = startY;
+				isHorizontalSwipe = false;
+				hasDirectionLock = false;
+			}, {
+				passive: true
 			}),
 
-			c.addEventListener("touchmove", function (t) {
-				const currentTouch = t.touches[0];
-				if (!currentTouch) { return; }
+			c.addEventListener("touchmove", function(t) {
+				currentX = t.changedTouches[0].pageX;
+				currentY = t.changedTouches[0].pageY;
 
-				const deltaX = currentTouch.pageX - n;
-				const deltaY = currentTouch.pageY - startY;
+				if (!hasDirectionLock) {
+					const diffX = Math.abs(currentX - startX);
+					const diffY = Math.abs(currentY - startY);
 
-				if (!isHorizontalSwipe) {
-					if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > 8) {
-						isHorizontalSwipe = true;
-					} else if (Math.abs(deltaY) > Math.abs(deltaX) && Math.abs(deltaY) > 8) {
-						return;
-					} else {
-						return;
+					if (diffX > 8 || diffY > 8) {
+						hasDirectionLock = true;
+						isHorizontalSwipe = diffX > diffY;
 					}
 				}
 
-				t.preventDefault();
-				l = currentTouch.pageX;
-			}, { passive: false }),
+				if (isHorizontalSwipe) {
+					t.preventDefault();
+				}
+			}, {
+				passive: false
+			}),
 
-			c.addEventListener("touchend", function (t) {
-				if (!isHorizontalSwipe) { return; }
+			c.addEventListener("touchend", function() {
+				if (!isHorizontalSwipe) {
+					return;
+				}
 
-				l < n && n > l + h ? s("next", 1)
-					: n < l && n + h < l && s("prev", 1)
+				currentX < startX && startX > currentX + h
+					? s("next", 1)
+					: startX < currentX && startX + h < currentX && s("prev", 1)
+			}),
+
+			c.addEventListener("touchcancel", function() {
 				isHorizontalSwipe = false;
+				hasDirectionLock = false;
 			})
 		)
 	}
